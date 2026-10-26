@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Supercars Olivos: una selección curada de autos nobles, deportivos y superdeportivos." />
+    
+    <title>Supercars Olivos</title>
+    <link rel="icon" href="assets/icono.png" type="image/png" />
+    
+    <!-- Fuentes utilizadas en el encabezado y el pie. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <!-- Navegacion -->
+    <header id="inicio" class="encabezado">
+        <div class="contenedor barra">
+            <a class="marca" href="#inicio">
+                <img src="assets/icono.png" alt="Logo de Supercars Olivos" width="64" height="64" />
+                <span>SUPERCARS <strong>OLIVOS</strong></span>
+            </a>
+            <nav class="navegacion" aria-label="navegacion principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#premiums">Premiums</a>
+                <a href="#deportivos">Deportivos</a>
+                <a class="enlace-destacado" href="#presupuesto">Presupuesto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner con img -->
+        <section class="hero">
+            <div class="contenedor">
+                <div class="hero-contenido">
+                    <h1>Encontrá tu próximo auto</h1>
+                    <p>Conocé nuestros modelos deportivos, premiums y superdeportivos.</p>
+                    <a class="boton boton-principal" href="#premiums">Explorar modelos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario -->
+        <section id="presupuesto" class="seccion-presupuesto" aria-label="Consulta de presupuesto">
+            <div class="contenedor">
+                <div class="caja-presupuesto">
+                    <form class="formulario" onsubmit="guardarConsulta(); return false;">
+                        <div class="campo">
+                            <label for="modelo">Modelo de interés</label>
+                            <select id="modelo" name="modelo" aria-label="Modelo de interes" required>
+                                <option value="">Modelo de interés *</option>
+                                <optgroup label="Premiums y superdeportivos">
+                                    <option value="Aston Martin DB11">Aston Martin DB11</option>
+                                    <option value="Audi R8">Audi R8</option>
+                                    <option value="Chevrolet Corvette">Chevrolet Corvette</option>
+                                    <option value="Ford Mustang">Ford Mustang</option>
+                                    <option value="Mercedes-Benz AMG">Mercedes-Benz AMG</option>
+                                    <option value="Porsche 911">Porsche 911</option>
+                                </optgroup>
+                                <optgroup label="Nobles y deportivos">
+                                    <option value="Audi A3">Audi A3</option>
+                                    <option value="Chevrolet Cruze">Chevrolet Cruze</option>
+                                    <option value="Fiat Cronos">Fiat Cronos</option>
+                                    <option value="Nissan Sentra">Nissan Sentra</option>
+                                    <option value="Toyota Corolla">Toyota Corolla</option>
+                                    <option value="Volkswagen Golf">Volkswagen Golf</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="nombre">Nombre y apellido</label>
+                            <input id="nombre" name="nombre" aria-label="Nombre y apellido" type="text" placeholder="Nombre y apellido *" required />
+                        </div>
+                        <div class="campo">
+                            <label for="localidad">Localidad / Provincia</label>
+                            <input id="localidad" name="localidad" aria-label="Localidad / Provincia" type="text" placeholder="Localidad / Provincia" required />
+                        </div>
+                        <div class="campo">
+                            <label for="celular">Celular</label>
+                            <input id="celular" name="celular" aria-label="Celular" type="tel" placeholder="Celular *" required />
+                        </div>
+                        <div class="campo">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" aria-label="Email" type="email" placeholder="Email *" required />
+                        </div>
+                        <div class="campo campo-consulta">
+                            <label for="consulta">Tu consulta</label>
+                            <input id="consulta" name="consulta" aria-label="Tu consulta" type="text" placeholder="Consulta" required />
+                        </div>
+                        <div class="campo-envio">
+                            <button class="boton boton-principal" type="submit">Guardar consulta de presupuesto</button>
+                        </div>
+                    </form>
+                    <p id="mensaje" class="mensaje" role="status"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Primera seccion -->
+        <section id="premiums" class="seccion catalogo">
+            <div class="contenedor">
+                <div class="titulo-seccion">
+                    <h2>Premiums y superdeportivos</h2>
+                    <p class="descripcion-seccion">Consulta como adjudica tu plan durante el primer año.</p>
+                </div>
+
+                <div class="grilla-autos">
+                    <article class="tarjeta-auto">
+                        <a class="imagen-auto" href="assets/premiums-y-superdeportivos/aston-martin-db11.png" target="_blank" title="imagen">
+                            <img src="assets/premiums-y-superdeportivos/aston-martin-db11.png" alt="Aston Martin DB11 gris, vista lateral" />
+                        </a>
+                        <div class="tarjeta-contenido">
+                            <h3>Aston Martin DB11</h3>
+                            <p class="descripcion-auto">Plan 70/30 adjudicación asegurada en cuota número 4 con el 40%.</p>
+                            <a class="boton boton-catalogo" href="#presupuesto">Consultar presupuesto</a>
+                        </div>
+                    </article>
+                    <article class="tarjeta-auto">
+                        <a class="imagen-auto" href="assets/premiums-y-superdeportivos/audi-r8.png" target="_blank" title="imagen">
+                            <img src="assets/premiums-y-superdeportivos/audi-r8.png" alt="Audi R8 gris, vista lateral" />
+                        </a>
+                        <div class="tarjeta-contenido">
+                            <h3>Audi R8</h3>
+                            <p class="descripcion-auto">Plan 70/30 adjudicación asegurada en cuota número 4 con el 40%.</p>
+                            <a class="boton boton-catalogo" href="#presupuesto">Consultar presupuesto</a>
+                        </div>
+                    </article>
+                    <article class="tarjeta-auto">
+                        <a class="imagen-auto" href="assets/premiums-y-superdeportivos/chevrolet-corvette.png" target="_blank" title="imagen">
+                            <img src="assets/premiums-y-superdeportivos/chevrolet-corvette.png" alt="Chevrolet Corvette gris, vista lateral" />
+                        </a>
+                        <div class="tarjeta-contenido">
+                            <h3>Chevrolet Corvette</h3>
+                            <p class="descripcion-auto">Plan 70/30 adjudicación asegurada en cuota número 4 con el 40%.</p>
+                            <a class="boton boton-catalogo" href="#presupuesto">Consultar presupuesto</a>
+                        </div>
+                    </article>
+                    <article class="tarjeta-auto">
+                        <a class="imagen-auto" href="assets/premiums-y-superdeportivos/ford-mustang.png" target="_blank" title="imagen">
+                            <img src="assets/premiums-y-superdeportivos/ford-mustang.png" alt="Ford Mustang gris, vista lateral" />
+                        </a>
+                        <div class="tarjeta-contenido">
+                            <h3>Ford Mustang</h3>
+                            <p class="descripcion-auto">Plan 70/30 adjudicación asegurada en cuota número 4 con el 40%.</p>
+                            <a class="boton boton-catalogo" href="#presupuesto">Consultar presupuesto</a>
+                        </div>
+                    </article>
+                    <article class="tarjeta-auto">
+                        <a class="imagen-auto" href="assets/premiums-y-superdeportivos/mercedes-benz-amg.png" target="_blank" title="imagen">
+                            <img src="assets/premiums-y-superdeportivos/mercedes-benz-amg.png" alt="Mercedes-Benz AMG gris, vista lateral" />
+                        </a>
+                        <div class="tarjeta-contenido">
+                            <h3>Mercedes-Benz AMG</h3>
+                            <p class="descripcion-auto">Plan 70/30 adjudicación asegurada en cuota número 4 con el 40%.</p>
+                            <a class="boton boton-catalogo" href="#presupuesto">Consultar presupuesto</a>
+                        </div>
+                    </article>
+                    <article class="tarjeta-auto">
+                        <a class="imagen-auto" href="assets/premiums-y-superdeportivos/porsche-911.png" target="_blank" title="imagen">
+                            <img src="assets/premiums-y-superdeportivos/porsche-911.png" alt="Porsche 911 gris, vista lateral" />
+                        </a>
+                        <div class="tarjeta-contenido">
+                            <h3>Porsche 911</h3>
+                            <p class="descripcion-auto">Plan 70/30 adjudicación asegurada en cuota número 4 con el 40%.</p>
+                            <a class="boton boton-catalogo" href="#presupuesto">Consultar presupuesto</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Segunda categoria  -->
+        <section id="deportivos" class="seccion catalogo catalogo-alternativo">
+            <div class="contenedor">
+                <div class="titulo-seccion">
+                    <h2>Nobles y deportivos</h2>
+                    <p class="descripcion-seccion">Encontrá tu compañero para la ciudad, la ruta y todo lo que viene.</p>
+                </div>
+
+                <div class="grilla-autos">
+                    <article class="tarjeta-auto">
+                        <a class="imagen-auto" href="assets/nobles-y-deportivos/audi-a3.png" target="_blank" title="imagen">
+                            <img src="assets/nobles-y-deportivos/audi-a3.png" alt="Audi A3 gris, vista lateral" />
+                        </a>
+                        <div class="tarjeta-contenido">
+                            <h3>Audi A3</h3>
+                            <p class="descripcion-auto">Plan 70/30 adjudicación asegurada en cuota número 4 con el 40%.</p>
+                            <a class="boton boton-catalogo" href="#presupuesto">Consultar presupuesto</a>
+                        </div>
+                    </article>
+                    <article class="tarjeta-auto">
+                        <a class="imagen-auto" href="assets/nobles-y-deportivos/chevrolet-cruze.png" target="_blank" title="imagen">
+                            <img src="assets/nobles-y-deportivos/chevrolet-cruze.png" alt="Chevrolet Cruze gris, vista lateral" />
+                        </a>
+                        <div class="tarjeta-contenido">
+                            <h3>Chevrolet Cruze</h3>
+                            <p class="descripcion-auto">Plan 70/30 adjudicación asegurada en cuota número 4 con el 40%.</p>
+                            <a class="boton boton-catalogo" href="#presupuesto">Consultar presupuesto</a>
+                        </div>
+                    </article>
+                    <article class="tarjeta-auto">
+                        <a class="imagen-auto" href="assets/nobles-y-deportivos/fiat-kronnos.png" target="_blank" title="imagen">
+                            <img src="assets/nobles-y-deportivos/fiat-kronnos.png" alt="Fiat Cronos gris, vista lateral" />
+                        </a>
+                        <div class="tarjeta-contenido">
+                            <h3>Fiat Cronos</h3>
+                            <p class="descripcion-auto">Plan 70/30 adjudicación asegurada en cuota número 4 con el 40%.</p>
+                            <a class="boton boton-catalogo" href="#presupuesto">Consultar presupuesto</a>
+                        </div>
+                    </article>
+                    <article class="tarjeta-auto">
+                        <a class="imagen-auto" href="assets/nobles-y-deportivos/nissan-sentra.png" target="_blank" title="imagen">
+                            <img src="assets/nobles-y-deportivos/nissan-sentra.png" alt="Nissan Sentra gris, vista lateral" />
+                        </a>
+                        <div class="tarjeta-contenido">
+                            <h3>Nissan Sentra</h3>
+                            <p class="descripcion-auto">Plan 70/30 adjudicación asegurada en cuota número 4 con el 40%.</p>
+                            <a class="boton boton-catalogo" href="#presupuesto">Consultar presupuesto</a>
+                        </div>
+                    </article>
+                    <article class="tarjeta-auto">
+                        <a class="imagen-auto" href="assets/nobles-y-deportivos/toyota-corolla.png" target="_blank" title="imagen">
+                            <img src="assets/nobles-y-deportivos/toyota-corolla.png" alt="Toyota Corolla gris, vista lateral" />
+                        </a>
+                        <div class="tarjeta-contenido">
+                            <h3>Toyota Corolla</h3>
+                            <p class="descripcion-auto">Plan 70/30 adjudicación asegurada en cuota número 4 con el 40%.</p>
+                            <a class="boton boton-catalogo" href="#presupuesto">Consultar presupuesto</a>
+                        </div>
+                    </article>
+                    <article class="tarjeta-auto">
+                        <a class="imagen-auto" href="assets/nobles-y-deportivos/volkswagen-golf.png" target="_blank" title="imagen">
+                            <img src="assets/nobles-y-deportivos/volkswagen-golf.png" alt="Volkswagen Golf gris, vista lateral" />
+                        </a>
+                        <div class="tarjeta-contenido">
+                            <h3>Volkswagen Golf</h3>
+                            <p class="descripcion-auto">Plan 70/30 adjudicación asegurada en cuota número 4 con el 40%.</p>
+                            <a class="boton boton-catalogo" href="#presupuesto">Consultar presupuesto</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- info extra -->
+        <section class="seccion pasos">
+            <div class="contenedor">
+                <h2>Tu próximo auto empieza acá</h2>
+                <div class="grilla-pasos">
+                    <article>
+                        <h3>Elegí tu modelo</h3>
+                        <p class="descripcion-paso">Explorá las dos categorías y encontrá el auto que te representa.</p>
+                    </article>
+                    <article>
+                        <h3>Dejanos tu consulta</h3>
+                        <p class="descripcion-paso">Completá el formulario con el modelo que te interesa y tus preguntas.</p>
+                    </article>
+                    <article>
+                        <h3>Consultá por el auto</h3>
+                        <p class="descripcion-paso">Podés dejarnos tus preguntas sobre el modelo que te interesa.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor pie-contenido">
+            <a class="marca" href="#inicio">
+                <img src="assets/icono.png" alt="Supercars Olivos" width="64" height="64" />
+                <span>SUPERCARS <strong>OLIVOS</strong></span>
+            </a>
+            <p>Olivos, Buenos Aires.<br />Pasión por los autos. Una experiencia para vos.</p>
+            <a class="volver" href="#inicio">Volver al inicio ↑</a>
+        </div>
+        <div class="contenedor pie-legal">
+            <p>© 2026 Supercars Olivos.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
